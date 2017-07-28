@@ -6,3 +6,6 @@ ios/app/build
 android/build
 ios/build
 android/.gradle
+*.iml
+*.idea
+android/local.properties
