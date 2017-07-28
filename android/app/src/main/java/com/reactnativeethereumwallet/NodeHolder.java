@@ -1,9 +1,11 @@
 package com.reactnativeethereumwallet;
 
+import org.ethereum.geth.Account;
 import org.ethereum.geth.Node;
 
 public class NodeHolder {
     private Node node;
+    private Account acc;
     private static NodeHolder instance = null;
     private NodeHolder(){}
     public static NodeHolder getInstance() {
@@ -19,5 +21,13 @@ public class NodeHolder {
 
     public void setNode(Node node) {
         this.node = node;
+    }
+
+    public Account getAcc() {
+        return acc;
+    }
+
+    public void setAcc(Account acc) {
+        this.acc = acc;
     }
 }

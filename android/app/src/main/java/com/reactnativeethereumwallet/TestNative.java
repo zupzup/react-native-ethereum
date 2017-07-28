@@ -25,9 +25,13 @@ public class TestNative extends ReactContextBaseJavaModule {
             android.util.Log.d("before", "yay");
             NodeHolder nh = NodeHolder.getInstance();
             Node node = nh.getNode();
+            Context ctx = new Context();
             if (node != null) {
                 NodeInfo info = node.getNodeInfo();
-                cb.invoke(node.getPeersInfo().size() + " node created, added from java ");
+                EthereumClient ethereumClient = node.getEthereumClient();
+                Account newAcc = nh.getAcc();
+                BigInt balanceAt = ethereumClient.getBalanceAt(ctx, new Address("0x22B84d5FFeA8b801C0422AFe752377A64Aa738c2"), -1);
+                cb.invoke(balanceAt.toString() + " ether found address:" + newAcc.getAddress().getHex());
                 return;
             }
             cb.invoke("node was null");
