@@ -8,8 +8,8 @@ export default class Bla extends React.Component {
     return (
       <View style={styles.container}>
         <Button title="button" onPress={() => {
-            NativeModules.TestNative.test("tojavandback", (str) => {
-                Alert.alert(str + ' pressed');
+            NativeModules.TestNative.test("", (str) => {
+                Alert.alert(str);
             })
         }}></Button>
       </View>

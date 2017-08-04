@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Bla from './Bla.android.js';
+import ETH from './ETH.android.js';
 
 export default class App extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class App extends React.Component {
         <Text>Shake your phone to open the developer menu.</Text>
         <Text>Hello!</Text>
         <Text>Hello!</Text>
-        <Bla />
+        <ETH />
       </View>
     );
   }
